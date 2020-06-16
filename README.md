@@ -2,7 +2,8 @@
 
 ## GT New Horizons整合包的汉化工作
 
-2020-3-22    2.0.8.7版本的汉化全部更新完毕。
+2020-5-22 
+2.0.9.0.beta2版本的汉化全部更新完毕。
 
 ## 汉化使用方式
 1、找到release内对应版本
@@ -32,15 +33,19 @@ PS：有时任务书无法正确汉化，可以尝试重载任务书，方法有
 
 ## 主要汉化者有：
 
-`Kiwi`剩下的所有工作
+`Kiwi` 剩下的所有工作
 
-`Sky_Cat`任务书初步汉化
+`Sky_Cat` 任务书初步汉化
 
-`huajijam`校对GregTech.lang、汉化GT++mod、汉化魔法蜜蜂魔导手册
+`huajijam` 校对GregTech.lang、汉化GT++mod、汉化魔法蜜蜂魔导手册
 
-`BloCamLimb`修改完善任务书config生成脚本
+`BloCamLimb` 修改完善任务书config生成脚本
 
-`JackMeds`汉化标题画面
+`JackMeds` 汉化标题画面
+
+`YPXxiaoK` 介绍汉化
+
+`Wired` 语言文件提取脚本
 
 以及老版本翻译主要贡献者
 

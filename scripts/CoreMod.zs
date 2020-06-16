@@ -893,19 +893,19 @@ mods.tconstruct.Smeltery.addMelting(<dreamcraft:item.MoldFormPipeHuge>, <liquid:
 
 // --- BBQ Glows Left Hand
 recipes.addShaped(<dreamcraft:item.OvenGlove>.withTag({Durability: 1000}), [
-[<harvestcraft:wovencottonItem>, <minecraft:leather>, <harvestcraft:wovencottonItem>],
-[<minecraft:leather>, <harvestcraft:wovencottonItem>, <minecraft:leather>],
+[<harvestcraft:wovencottonItem>, <ore:itemLeather>, <harvestcraft:wovencottonItem>],
+[<ore:itemLeather>, <harvestcraft:wovencottonItem>, <ore:itemLeather>],
 [<minecraft:string>, <minecraft:string>, <minecraft:string>]]);
 // -
-recipes.addShapeless(<dreamcraft:item.OvenGlove>.withTag({Durability: 1000}), [<dreamcraft:item.OvenGlove>, <minecraft:leather>, <minecraft:leather>, <minecraft:leather>]);
+recipes.addShapeless(<dreamcraft:item.OvenGlove>.withTag({Durability: 1000}), [<dreamcraft:item.OvenGlove>, <ore:itemLeather>, <ore:itemLeather>, <ore:itemLeather>]);
 
 // --- BBQ Glows Right Hand
 recipes.addShaped(<dreamcraft:item.OvenGlove:1>.withTag({Durability: 1000}), [
-[<minecraft:leather>, <harvestcraft:wovencottonItem>, <minecraft:leather>],
-[<harvestcraft:wovencottonItem>, <minecraft:leather>, <harvestcraft:wovencottonItem>],
+[<ore:itemLeather>, <harvestcraft:wovencottonItem>, <ore:itemLeather>],
+[<harvestcraft:wovencottonItem>, <ore:itemLeather>, <harvestcraft:wovencottonItem>],
 [<minecraft:string>, <minecraft:string>, <minecraft:string>]]);
 // -
-recipes.addShapeless(<dreamcraft:item.OvenGlove:1>.withTag({Durability: 1000}), [<dreamcraft:item.OvenGlove:1>, <minecraft:leather>, <minecraft:leather>, <minecraft:leather>]);
+recipes.addShapeless(<dreamcraft:item.OvenGlove:1>.withTag({Durability: 1000}), [<dreamcraft:item.OvenGlove:1>, <ore:itemLeather>, <ore:itemLeather>, <ore:itemLeather>]);
 
 // --- Neutron Reflector Parts
 recipes.addShaped(<dreamcraft:item.NeutronReflectorParts>, [
@@ -926,6 +926,11 @@ recipes.addShaped(<dreamcraft:tile.DiamondFrameBox>, [
 [<ore:stickDiamond>, <ore:craftingToolWrench>, <ore:stickDiamond>],
 [<ore:stickDiamond>, <ore:stickDiamond>, <ore:stickDiamond>]]);
 
++// --- Coinage Mold
+recipes.addShaped(<dreamcraft:item.MoldFormCoinage>, [
+[null, null, null],
+[null, BlankCast, null],
+[File, WireCutter, null]]);	
 
 
 
@@ -1704,7 +1709,7 @@ mods.thaumcraft.Research.addInfusionPage("PORTALDEEPDARK", <ExtraUtilities:dark_
 mods.thaumcraft.Warp.addToResearch("PORTALDEEPDARK", 8);
 
 // --- Magical Wood
-mods.thaumcraft.Research.addResearch("MAGICALWOOD", "NEWHORIZONS", "praecantatio 15, lucrum 12, arbor 9, cognitio 6, pannus 3", -2, 6, 4, MagicalWood);
+mods.thaumcraft.Research.addResearch("MAGICALWOOD", "NEWHORIZONS", "praecantatio 15, lucrum 12, arbor 9, cognitio 6, pannus 3", -2 as int, 6, 4, MagicalWood);
 game.setLocalization("tc.research_name.MAGICALWOOD", "\u9b54\u6cd5\u6728\u5934");
 game.setLocalization("tc.research_text.MAGICALWOOD", "[EU]\u66ae\u8272\u795e\u79d8\u9b54\u6cd5");
 mods.thaumcraft.Research.addPrereq("MAGICALWOOD", "EMINENCESTONE", false);
@@ -1721,7 +1726,7 @@ mods.thaumcraft.Arcane.addShaped("MAGICALWOOD", MagicalWood * 4, "aer 10, ignis 
 mods.thaumcraft.Research.addArcanePage("MAGICALWOOD", MagicalWood);
 
 // --- Angel Block
-mods.thaumcraft.Research.addResearch("ANGELBLOCK", "NEWHORIZONS", "aer 15, lucrum 12, ignis 9, terra 6", -2, 8, 4, <ExtraUtilities:angelBlock>);
+mods.thaumcraft.Research.addResearch("ANGELBLOCK", "NEWHORIZONS", "aer 15, lucrum 12, ignis 9, terra 6", -2 as int, 8, 4, <ExtraUtilities:angelBlock>);
 game.setLocalization("tc.research_name.ANGELBLOCK", "\u5929\u4f7f\u65b9\u5757");
 game.setLocalization("tc.research_text.ANGELBLOCK", "[EU]\u7a7a\u4e2d\u7684\u65b9\u5757");
 mods.thaumcraft.Research.addPrereq("ANGELBLOCK", "MAGICALWOOD", false);
@@ -1739,7 +1744,7 @@ mods.thaumcraft.Arcane.addShaped("ANGELBLOCK", <ExtraUtilities:angelBlock>, "aer
 mods.thaumcraft.Research.addArcanePage("ANGELBLOCK", <ExtraUtilities:angelBlock>);
 
 // --- Dezlis Marshmallow
-mods.thaumcraft.Research.addResearch("DEZILSMARSHMALLOW", "NEWHORIZONS", "alienis 15, praecantatio 12, superbia 9, sano 6, potentia 3", -2, 2, 4, <DraconicEvolution:dezilsMarshmallow>);
+mods.thaumcraft.Research.addResearch("DEZILSMARSHMALLOW", "NEWHORIZONS", "alienis 15, praecantatio 12, superbia 9, sano 6, potentia 3", -2 as int, 2, 4, <DraconicEvolution:dezilsMarshmallow>);
 game.setLocalization("tc.research_name.DEZILSMARSHMALLOW", "Dezil\u7684\u68c9\u82b1\u7cd6");
 game.setLocalization("tc.research_text.DEZILSMARSHMALLOW", "[DE]\u62dc\u6258\u8fd9\u662fOP\u7684\u98df\u7269\u5427");
 mods.thaumcraft.Research.addPrereq("DEZILSMARSHMALLOW", "INFUSION", false);
@@ -1850,7 +1855,7 @@ mods.thaumcraft.Research.addInfusionPage("DRAGONEGG", <minecraft:dragon_egg>);
 mods.thaumcraft.Warp.addToResearch("DRAGONEGG", 5);
 
 // --- Silky Cloth and Jewel
-mods.thaumcraft.Research.addResearch("SILKYCRYSTAL", "NEWHORIZONS", "pannus 15, lucrum 2, instrumentum 9, aer 6, praecantatio 3", -2, -2, 4, <TConstruct:materials:26>);
+mods.thaumcraft.Research.addResearch("SILKYCRYSTAL", "NEWHORIZONS", "pannus 15, lucrum 2, instrumentum 9, aer 6, praecantatio 3", -2 as int, -2 as int, 4, <TConstruct:materials:26>);
 game.setLocalization("tc.research_name.SILKYCRYSTAL", "\u7cbe\u5236\u73e0\u5b9d");
 game.setLocalization("tc.research_text.SILKYCRYSTAL", "[TC]\u8f7b\u67d4\u7684\u9b54\u6cd5");
 mods.thaumcraft.Research.addPrereq("SILKYCRYSTAL", "ENCHANTINGTABLE", false);
@@ -1867,7 +1872,7 @@ mods.thaumcraft.Infusion.addRecipe("SILKYCRYSTAL", <gregtech:gt.metaitem.02:2950
 mods.thaumcraft.Research.addInfusionPage("SILKYCRYSTAL", <TConstruct:materials:26>);
 
 // --- Lava Crystal
-mods.thaumcraft.Research.addResearch("LAVACRYSTAL", "NEWHORIZONS", "ignis 15, praecantatio 12, vacuos 9, perditio 6", 2, -2, 4, <TConstruct:materials:7>);
+mods.thaumcraft.Research.addResearch("LAVACRYSTAL", "NEWHORIZONS", "ignis 15, praecantatio 12, vacuos 9, perditio 6", 2, -2 as int, 4, <TConstruct:materials:7>);
 game.setLocalization("tc.research_name.LAVACRYSTAL", "\u7194\u5ca9\u6676\u4f53");
 game.setLocalization("tc.research_text.LAVACRYSTAL", "[TC]\u70bd\u70ed\u7684\u9b54\u6cd5.");
 mods.thaumcraft.Research.addPrereq("LAVACRYSTAL", "ENCHANTINGTABLE", false);
@@ -1883,7 +1888,7 @@ mods.thaumcraft.Infusion.addRecipe("LAVACRYSTAL", <minecraft:fire_charge>,
 mods.thaumcraft.Research.addInfusionPage("LAVACRYSTAL", <TConstruct:materials:7>);
 
 // --- Ball of Moss
-mods.thaumcraft.Research.addResearch("BALLOFMOSS", "NEWHORIZONS", "sano 15, terra 12, instrumentum 9", 0, -4, 4, <TConstruct:materials:6>);
+mods.thaumcraft.Research.addResearch("BALLOFMOSS", "NEWHORIZONS", "sano 15, terra 12, instrumentum 9", 0, -4 as int, 4, <TConstruct:materials:6>);
 game.setLocalization("tc.research_name.BALLOFMOSS", "\u82d4\u85d3\u7403");
 game.setLocalization("tc.research_text.BALLOFMOSS", "[TC]\u4f60\u7684\u5de5\u5177\u4f1a\u81ea\u5df1\u4fee\u590d.");
 mods.thaumcraft.Research.addPrereq("BALLOFMOSS", "SILKYCRYSTAL", false);
@@ -1898,7 +1903,7 @@ mods.thaumcraft.Infusion.addRecipe("BALLOFMOSS", <Thaumcraft:ItemResource:15>,
 mods.thaumcraft.Research.addInfusionPage("BALLOFMOSS", <TConstruct:materials:6>);
 
 // --- Necrotic Bone
-mods.thaumcraft.Research.addResearch("NECROTICBONE", "NEWHORIZONS", "exanimis 15, mortuus 12, spiritus 9, venenum 6", 0, -2, 4, <TConstruct:materials:8>);
+mods.thaumcraft.Research.addResearch("NECROTICBONE", "NEWHORIZONS", "exanimis 15, mortuus 12, spiritus 9, venenum 6", 0, -2 as int, 4, <TConstruct:materials:8>);
 game.setLocalization("tc.research_name.NECROTICBONE", "\u51cb\u7075\u4e4b\u9aa8");
 game.setLocalization("tc.research_text.NECROTICBONE", "[TC]\u5236\u9020\u51cb\u7075\u4e4b\u9aa8\u7684\u90aa\u6076\u65b9\u6cd5.");
 mods.thaumcraft.Research.addPrereq("NECROTICBONE", "ENTROPICPROCESSING", false);
@@ -1917,7 +1922,7 @@ mods.thaumcraft.Research.addCruciblePage("NECROTICBONE", <TConstruct:materials:8
 mods.thaumcraft.Warp.addToResearch("NECROTICBONE", 2);
 
 // --- Red Heart
-mods.thaumcraft.Research.addResearch("REDHEART", "NEWHORIZONS", "ignis 15, praecantatio 12, sano 9, mortuus 6, exanimis 3", 0, -6, 4, <TConstruct:heartCanister:1>);
+mods.thaumcraft.Research.addResearch("REDHEART", "NEWHORIZONS", "ignis 15, praecantatio 12, sano 9, mortuus 6, exanimis 3", 0, -6 as int, 4, <TConstruct:heartCanister:1>);
 game.setLocalization("tc.research_name.REDHEART", "\u5fae\u578b\u7ea2\u5fc3");
 game.setLocalization("tc.research_text.REDHEART", "[TC]10\u5fc3\u751f\u547d\u53ef\u4e0d\u591f.");
 mods.thaumcraft.Research.addPrereq("REDHEART", "RUNICAUGMENTATION", false);
@@ -1936,7 +1941,7 @@ mods.thaumcraft.Research.addInfusionPage("REDHEART", <TConstruct:heartCanister:1
 mods.thaumcraft.Warp.addToResearch("REDHEARTCANISTER", 1);
 
 // --- Red Heart Canister
-mods.thaumcraft.Research.addResearch("REDHEARTCANISTER", "NEWHORIZONS", "metallum 15, lucrum 15, sano 12, ignis 9, mortuus 6, exanimis 3", 0, -8, 4, <TConstruct:heartCanister:2>);
+mods.thaumcraft.Research.addResearch("REDHEARTCANISTER", "NEWHORIZONS", "metallum 15, lucrum 15, sano 12, ignis 9, mortuus 6, exanimis 3", 0, -8 as int, 4, <TConstruct:heartCanister:2>);
 game.setLocalization("tc.research_name.REDHEARTCANISTER", "\u7ea2\u5fc3\u5bb9\u5668");
 game.setLocalization("tc.research_text.REDHEARTCANISTER", "[TC]\u88c5\u5728\u4e00\u4e2a\u5c0f\u76d2\u5b50\u91cc.");
 mods.thaumcraft.Research.addPrereq("REDHEARTCANISTER", "REDHEART", false);
@@ -1953,7 +1958,7 @@ mods.thaumcraft.Research.addArcanePage("REDHEARTCANISTER", <TConstruct:heartCani
 mods.thaumcraft.Warp.addToResearch("REDHEARTCANISTER", 2);
 
 // --- Yellow Heart
-mods.thaumcraft.Research.addResearch("YELLOWHEART", "NEWHORIZONS", "mortuus 15, praecantatio 12, exanimis 9, sano 6, ignis 3", -2, -7, 4, <TConstruct:heartCanister:3> );
+mods.thaumcraft.Research.addResearch("YELLOWHEART", "NEWHORIZONS", "mortuus 15, praecantatio 12, exanimis 9, sano 6, ignis 3", -2 as int, -7 as int, 4, <TConstruct:heartCanister:3> );
 game.setLocalization("tc.research_name.YELLOWHEART", "\u5fae\u578b\u9ec4\u5fc3");
 game.setLocalization("tc.research_text.YELLOWHEART", "[TC]20\u5fc3\u751f\u547d\u53ef\u4e0d\u591f.");
 mods.thaumcraft.Research.addPrereq("YELLOWHEART", "REDHEART", false);
@@ -1970,7 +1975,7 @@ mods.thaumcraft.Research.addInfusionPage("YELLOWHEART", <TConstruct:heartCaniste
 mods.thaumcraft.Warp.addToResearch("YELLOWHEARTCANISTER", 2);
 
 // --- Yellow Heart Canister
-mods.thaumcraft.Research.addResearch("YELLOWHEARTCANISTER", "NEWHORIZONS", "metallum 15, lucrum 15, sano 12, praecantatio 9, mortuus 6, exanimis 3", -2, -9, 4, <TConstruct:heartCanister:4> );
+mods.thaumcraft.Research.addResearch("YELLOWHEARTCANISTER", "NEWHORIZONS", "metallum 15, lucrum 15, sano 12, praecantatio 9, mortuus 6, exanimis 3", -2 as int, -9 as int, 4, <TConstruct:heartCanister:4> );
 game.setLocalization("tc.research_name.YELLOWHEARTCANISTER", "\u9ec4\u5fc3\u5bb9\u5668");
 game.setLocalization("tc.research_text.YELLOWHEARTCANISTER", "[TC]\u88c5\u5728\u4e00\u4e2a\u76d2\u5b50\u91cc.");
 mods.thaumcraft.Research.addPrereq("YELLOWHEARTCANISTER", "YELLOWHEART", false);
@@ -1987,7 +1992,7 @@ mods.thaumcraft.Research.addArcanePage("YELLOWHEARTCANISTER", <TConstruct:heartC
 mods.thaumcraft.Warp.addToResearch("YELLOWHEARTCANISTER", 3);
 
 // --- Green Heart
-mods.thaumcraft.Research.addResearch("GREENHEART", "NEWHORIZONS", "infernus 15, lucrum 12, praecantatio 12, spiritus 9, fames 6, corpus 3", -4, -7, 4, <TConstruct:heartCanister:5>);
+mods.thaumcraft.Research.addResearch("GREENHEART", "NEWHORIZONS", "infernus 15, lucrum 12, praecantatio 12, spiritus 9, fames 6, corpus 3", -4 as int, -7 as int, 4, <TConstruct:heartCanister:5>);
 game.setLocalization("tc.research_name.GREENHEART", "\u5fae\u578b\u7eff\u5fc3");
 game.setLocalization("tc.research_text.GREENHEART", "[TC]30\u5fc3\u751f\u547d\u53ef\u4e0d\u591f.");
 mods.thaumcraft.Research.addPrereq("GREENHEART", "YELLOWHEART", false);
@@ -2004,7 +2009,7 @@ mods.thaumcraft.Research.addInfusionPage("GREENHEART", <TConstruct:heartCanister
 mods.thaumcraft.Warp.addToResearch("GREENHEART", 3);
 
 // --- Green Heart Canister
-mods.thaumcraft.Research.addResearch("GREENHEARTCANISTER", "NEWHORIZONS", "infernus 15, metallum 15, lucrum 12, sano 12, praecantatio 12, spiritus 9, fames 6, corpus 3", -4, -9, 4, <TConstruct:heartCanister:6>);
+mods.thaumcraft.Research.addResearch("GREENHEARTCANISTER", "NEWHORIZONS", "infernus 15, metallum 15, lucrum 12, sano 12, praecantatio 12, spiritus 9, fames 6, corpus 3", -4 as int, -9 as int, 4, <TConstruct:heartCanister:6>);
 game.setLocalization("tc.research_name.GREENHEARTCANISTER", "\u7eff\u5fc3\u5bb9\u5668");
 game.setLocalization("tc.research_text.GREENHEARTCANISTER", "[TC]\u88c5\u5728\u4e00\u4e2a\u5927\u76d2\u5b50\u91cc.");
 mods.thaumcraft.Research.addPrereq("GREENHEARTCANISTER", "GREENHEART", false);
@@ -2024,7 +2029,7 @@ mods.thaumcraft.Research.addArcanePage("GREENHEARTCANISTER", <TConstruct:heartCa
 mods.thaumcraft.Warp.addToResearch("GREENHEARTCANISTER", 4);
 
 // --- Ender Chest Arcane
-mods.thaumcraft.Research.addResearch("ENDERCHEST", "NEWHORIZONS", "metallum 15, electrum 15, machina 12, alienis 9, lucrum 6, fabrico 3, ", -4, 0, 4, <EnderStorage:enderChest>);
+mods.thaumcraft.Research.addResearch("ENDERCHEST", "NEWHORIZONS", "metallum 15, electrum 15, machina 12, alienis 9, lucrum 6, fabrico 3, ", -4 as int, 0, 4, <EnderStorage:enderChest>);
 game.setLocalization("tc.research_name.ENDERCHEST", "\u672b\u5f71\u7bb1\u5b50");
 game.setLocalization("tc.research_text.ENDERCHEST", "[EC]\u5662,\u8fd9\u6bd4\u7bb1\u5b50\u66f4\u9b54\u6cd5!");
 mods.thaumcraft.Research.addPrereq("ENDERCHEST", "INFUSION", false);
@@ -2041,7 +2046,7 @@ mods.thaumcraft.Arcane.addShaped("ENDERCHEST", <EnderStorage:enderChest>, "aer 1
 mods.thaumcraft.Research.addArcanePage("ENDERCHEST", <EnderStorage:enderChest>);
 
 // --- Ender Tank Arcane
-mods.thaumcraft.Research.addResearch("ENDERTANK", "NEWHORIZONS", "metallum 15, electrum 15, machina 12, ignis 9, lucrum 6, sensus 3, ", -4, 2, 4, <EnderStorage:enderChest:4096>);
+mods.thaumcraft.Research.addResearch("ENDERTANK", "NEWHORIZONS", "metallum 15, electrum 15, machina 12, ignis 9, lucrum 6, sensus 3, ", -4 as int, 2, 4, <EnderStorage:enderChest:4096>);
 game.setLocalization("tc.research_name.ENDERTANK", "\u672b\u5f71\u84c4\u6c34\u69fd");
 game.setLocalization("tc.research_text.ENDERTANK", "[EC]\u5662,\u8fd9\u6bd4\u6c34\u69fd\u66f4\u9b54\u6cd5!");
 mods.thaumcraft.Research.addPrereq("ENDERTANK", "ENDERCHEST", false);
@@ -2058,7 +2063,7 @@ mods.thaumcraft.Arcane.addShaped("ENDERTANK", <EnderStorage:enderChest:4096>, "a
 mods.thaumcraft.Research.addArcanePage("ENDERTANK", <EnderStorage:enderChest:4096>);
 
 // --- Ender Pouch Arcane
-mods.thaumcraft.Research.addResearch("ENDERPOUCHE", "NEWHORIZONS", "lucrum 15, vitreus 15, metallum 12, electrum 9, machina 6, alienis 3, ", -4, 4, 4, <EnderStorage:enderPouch>);
+mods.thaumcraft.Research.addResearch("ENDERPOUCHE", "NEWHORIZONS", "lucrum 15, vitreus 15, metallum 12, electrum 9, machina 6, alienis 3, ", -4 as int, 4, 4, <EnderStorage:enderPouch>);
 game.setLocalization("tc.research_name.ENDERPOUCHE", "\u672b\u5f71\u888b\u5b50");
 game.setLocalization("tc.research_text.ENDERPOUCHE", "[EC]\u5662,\u8fd9\u6bd4\u80cc\u5305\u66f4\u9b54\u6cd5!");
 mods.thaumcraft.Research.addPrereq("ENDERPOUCHE", "ENDERTANK", false);
@@ -2086,7 +2091,7 @@ game.setLocalization("OpenBlocks.research_page.AUTOENCHANTINGTABLE.1", "\u81ea\u
 \u6700\u540e\u4e00\u79cd\u8bbe\u5b9a\u53ef\u4f7f\u81ea\u52a8\u9644\u9b54\u53f0\u5728\u5b8c\u6210\u9644\u9b54\u540e\u5c06\u5176\u81ea\u52a8\u8f93\u51fa\u5230\u67d0\u4e00\u9762\u7684\u7bb1\u5b50\u4e2d.
 \u6240\u6709\u8fd9\u4e09\u79cd\u8bbe\u5b9a\u90fd\u53ef\u4ee5\u6307\u5b9a\u8f93\u5165/\u8f93\u51fa\u9762(\u901a\u8fc7\u5728\u4e2a\u4eba\u8bbe\u7f6e\u754c\u9762\u5de6\u952e\u9644\u9b54\u53f0\u7684\u5404\u4e2a\u9762\u5b8c\u6210\u6307\u5b9a).");
 mods.thaumcraft.Research.addPage("AUTOENCHANTINGTABLE", "OpenBlocks.research_page.AUTOENCHANTINGTABLE.2");
-game.setLocalization("OpenBlocks.research_page.AUTOENCHANTINGTABLE.2", " The enchantment table model in the panels can also be rotated by holding the right mouse button and dragging the cursor around.");
+game.setLocalization("OpenBlocks.research_page.AUTOENCHANTINGTABLE.2", " \u4f60\u8fd8\u53ef\u4ee5\u6309\u4f4f\u53f3\u952e\u62d6\u52a8\u6765\u65cb\u8f6c\u754c\u9762\u5185\u7684\u9644\u9b54\u53f0\u6a21\u578b\u000d\u000a.");
 mods.thaumcraft.Arcane.addShaped("AUTOENCHANTINGTABLE", <OpenBlocks:autoenchantmenttable>, "aer 75, aqua 75, ignis 75, terra 75. ordo 75, perditio 75", [
 [<gregtech:gt.metaitem.01:17526>, <minecraft:book>, <gregtech:gt.metaitem.01:17526>],
 [<gregtech:gt.metaitem.01:27019>, <minecraft:enchanting_table>, <gregtech:gt.metaitem.01:27019>],
@@ -2095,7 +2100,7 @@ mods.thaumcraft.Research.addArcanePage("AUTOENCHANTINGTABLE", <OpenBlocks:autoen
 mods.thaumcraft.Warp.addToResearch("AUTOENCHANTINGTABLE", 1);
 
 // --- Luggage
-mods.thaumcraft.Research.addResearch("LUGGAGE", "NEWHORIZONS", "alienis 15, sensus 15, iter 12, praecantatio 9, fabrico 6, lucrum 3", -2, 0, 4, <OpenBlocks:luggage>);
+mods.thaumcraft.Research.addResearch("LUGGAGE", "NEWHORIZONS", "alienis 15, sensus 15, iter 12, praecantatio 9, fabrico 6, lucrum 3", -2 as int, 0, 4, <OpenBlocks:luggage>);
 game.setLocalization("tc.research_name.LUGGAGE", "\u884c\u674e\u7bb1");
 game.setLocalization("tc.research_text.LUGGAGE", "[OB]\u8ddf\u7740\u6211\u7684\u884c\u674e\u7bb1");
 mods.thaumcraft.Research.addPrereq("LUGGAGE", "ENDERCHEST", false);

@@ -45,7 +45,7 @@ val Piston = <minecraft:piston>;
 val DiamondGrindingHead = <gregtech:gt.metaitem.01:32722>;
 val Obsidian = <ore:stoneObsidian>;
 val Stone = <ore:stone>;
-val Leather = <minecraft:leather>;
+val Leather = <ore:itemLeather>;
 val BGuide = <OpenBlocks:guide>;
 val BlockPlacer = <OpenBlocks:blockPlacer>;
 val BlockBreaker = <OpenBlocks:blockbreaker>;
@@ -633,7 +633,7 @@ Mixer.addRecipe(<OpenBlocks:tastyClay>, null, [<minecraft:clay_ball>, <minecraft
 
 
 // --- Golden Egg
-mods.thaumcraft.Research.addResearch("GOLDENEGG", "MAGICBEES", "alienis 15, bestia 12, victus 9, humanus 6", -4, 5, 4, <OpenBlocks:goldenegg>);
+mods.thaumcraft.Research.addResearch("GOLDENEGG", "MAGICBEES", "alienis 15, bestia 12, victus 9, humanus 6", -4 as int, 5, 4, <OpenBlocks:goldenegg>);
 game.setLocalization("tc.research_name.GOLDENEGG", "\u91d1\u86cb");
 game.setLocalization("tc.research_text.GOLDENEGG", "[OB]\u8ff7\u4f60\u66ff\u8eab");
 mods.thaumcraft.Research.addPrereq("GOLDENEGG", "MB_DimensionalSingularity", false);

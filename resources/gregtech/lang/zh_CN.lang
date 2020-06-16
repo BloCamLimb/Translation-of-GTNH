@@ -42,6 +42,9 @@ GT5U.machines.pumpareaset=工作区域设置为
 GT5U.machines.oilfluidpump=石油/流体钻机
 GT5U.machines.minermulti=采矿场
 
+
+
+
 GT5U.multiblock.pollution=污染减少到
 GT5U.multiblock.energy=存储能量
 GT5U.multiblock.Progress=工作时间
@@ -126,7 +129,7 @@ achievement.Redstone.desc=高度：5-40，几率：60，主世界/下界/火星/
 achievement.Ruby=找到红宝石矿石
 achievement.Ruby.desc=高度：5-40，几率：60，主世界/下界/火星/木卫三/金星/水星/天卫五/织女一B/巴德纳F//
 achievement.Cinnabar=找到朱砂矿石
-achievement.Cinnabar.desc=高度：5-40，几率：60，主世界/下界/火星/木卫三/金星/水星/天卫五/织女一B/巴德纳F//
+achievement.Cinnabar.desc=高度：5-35，几率：16，暮色森林//
 achievement.Cinnabar=找到朱砂矿石
 achievement.Cinnabar.desc=高度：5-35，几率：16，暮色森林//
 achievement.Soapstone=找到皂石矿石
@@ -889,7 +892,7 @@ for.bees.species.shadowmetal=暗影金属
 for.bees.species.divided=不稳定金属
 for.bees.species.sparkeling=凋灵
 for.bees.species.redstone=红石
-for.bees.species.certus=塞特斯
+for.bees.species.certus=赛特斯
 for.bees.species.fluix=氟
 for.bees.species.ruby=红宝石
 for.bees.species.lapis=青金石
@@ -973,8 +976,8 @@ for.bees.species.triton=海卫一
 for.bees.species.pluto=冥王星
 for.bees.species.haumea=妊神星
 for.bees.species.makemake=鸟神星
-for.bees.species.centauri=人马座
-for.bees.species.acentauri=人马座a
+for.bees.species.centauri=半人马
+for.bees.species.acentauri=半人马a
 for.bees.species.tceti=鲸鱼座T星
 for.bees.species.tcetie=鲸鱼座T星E
 for.bees.species.barnarda=巴纳德
@@ -986,6 +989,13 @@ for.bees.species.vegab=织女B
 for.bees.species.cosmicneutronium=宇宙中子素
 for.bees.species.infinitycatalyst=无尽催化剂
 for.bees.species.infinity=无尽
+for.bees.species.enddust=末影粉末
+for.bees.species.stardust=星尘
+for.bees.species.ectoplasma=外质
+for.bees.species.arcaneshard=奥术碎片
+for.bees.species.dragonessence=龙之精华
+for.bees.species.enderman=末影人
+for.bees.species.silverfish=蠹虫
 
 for.mutation.condition.biomeid=需要生物群系
 for.mutation.condition.dim=需要维度(世界)
